@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.TreeSet;
 
 @Component
 @Slf4j
@@ -30,7 +29,7 @@ public class OrderValidator {
         }
     }
 
-    public void validateTokens(final String orderString, final LinkedHashSet<String> tokens) {
+    public void validateTokens(final String orderString, final List<String> tokens) {
         tokens.forEach(token -> {
             if (StringUtils.isBlank(token)) {
                 throw new OrderProcessorException(

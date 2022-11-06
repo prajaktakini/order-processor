@@ -2,15 +2,12 @@ package com.exchange.stock.processor.orders.model;
 
 import lombok.Data;
 
-import java.util.UUID;
 
 @Data
-public class StockCompany {
-    private String stockId;
+public class Company {
     private Symbol symbol;
 
-    public StockCompany(final Symbol symbol) {
-        this.stockId = UUID.randomUUID().toString();
+    public Company(final Symbol symbol) {
         this.symbol = symbol;
     }
 
